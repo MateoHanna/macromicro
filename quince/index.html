@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis XV Años · Isabella</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#4A1426;
+    --wine-2:#2E1020;
+    --gold:#D4AF6A;
+    --gold-soft:#E6Cd97;
+    --ivory:#F6ECDC;
+    --ivory-dim:#C9B79E;
+    --blush:#E8C5C0;
+    --card:rgba(255,255,255,.05);
+    --line:rgba(212,175,106,.28);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Montserrat',system-ui,sans-serif;color:var(--ivory);
+    background:radial-gradient(120% 80% at 50% 0%,#5A1A30 0%,var(--wine) 38%,var(--wine-2) 100%);
+    min-height:100vh;padding:26px 16px 40px;position:relative;overflow-x:hidden;
+  }
+  .deco{position:fixed;z-index:0;pointer-events:none;color:var(--gold);opacity:.5;font-size:16px;animation:twinkle 4s ease-in-out infinite}
+  .deco.a{top:9%;left:8%}.deco.b{top:22%;right:10%;animation-delay:1s}
+  .deco.c{top:55%;left:7%;animation-delay:2s}.deco.d{bottom:10%;right:9%;animation-delay:1.5s}
+  @keyframes twinkle{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:.7;transform:scale(1.1)}}
+
+  .frame{max-width:460px;margin:0 auto;position:relative;z-index:1}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:22px;
+    padding:30px 24px;margin-bottom:16px;backdrop-filter:blur(4px);
+    box-shadow:0 18px 40px -24px rgba(0,0,0,.6);
+  }
+
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:14px}
+  .flourish{text-align:center;color:var(--gold);font-size:22px;letter-spacing:.3em;margin:2px 0 8px}
+  .kicker{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;text-align:center;color:var(--blush);margin-bottom:4px}
+  .name{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(50px,18vw,76px);line-height:.95;text-align:center;color:var(--ivory);text-shadow:0 2px 18px rgba(212,175,106,.25)}
+  .xv{font-family:'Playfair Display',serif;font-size:22px;text-align:center;color:var(--gold);letter-spacing:.16em;margin-top:8px;font-style:italic}
+  .date-line{text-align:center;font-weight:600;color:var(--gold-soft);margin-top:18px;font-size:13px;letter-spacing:.1em}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:18px auto;max-width:160px;opacity:.6}
+
+  .cd-label{text-align:center;font-weight:600;color:var(--ivory-dim);font-size:12px;margin-bottom:14px;letter-spacing:.08em;text-transform:uppercase}
+  .cd{display:flex;gap:8px;justify-content:center}
+  .cd-box{flex:1;background:rgba(212,175,106,.08);border:1px solid var(--line);border-radius:14px;padding:14px 4px;text-align:center}
+  .cd-num{font-family:'Playfair Display',serif;font-weight:600;font-size:30px;color:var(--gold-soft);line-height:1}
+  .cd-unit{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-dim);margin-top:6px}
+
+  .row{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+  .row:last-of-type{margin-bottom:0}
+  .ico{flex:none;width:42px;height:42px;border-radius:12px;background:rgba(212,175,106,.12);border:1px solid var(--line);display:grid;place-items:center;font-size:19px}
+  .row h3{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+  .row p{font-size:15px;font-weight:500;color:var(--ivory);line-height:1.4}
+
+  .btn{display:block;width:100%;border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:15px;letter-spacing:.04em;padding:15px;border-radius:14px;transition:transform .15s}
+  .btn:active{transform:scale(.98)}
+  .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:var(--wine-2);box-shadow:0 12px 22px -12px rgba(212,175,106,.6)}
+  .btn-ghost{background:transparent;color:var(--gold-soft);border:1px solid var(--gold)}
+  .btn:focus-visible{outline:3px solid var(--gold-soft);outline-offset:3px}
+  .mt{margin-top:12px}
+
+  .section-title{font-family:'Playfair Display',serif;font-weight:600;font-size:26px;text-align:center;margin-bottom:4px;color:var(--ivory)}
+  .section-sub{text-align:center;color:var(--ivory-dim);font-size:13px;font-weight:500;margin-bottom:18px;letter-spacing:.04em}
+
+  .field{margin-bottom:12px}
+  .field label{display:block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .field input{width:100%;font-family:inherit;font-size:16px;font-weight:500;color:var(--ivory);padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.04)}
+  .field input::placeholder{color:rgba(201,183,158,.6)}
+  .field input:focus{outline:none;border-color:var(--gold)}
+  .choice{display:flex;gap:10px}
+  .choice button{flex:1;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer;padding:13px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--ivory-dim)}
+  .choice button.on{background:linear-gradient(135deg,var(--gold),var(--gold-soft));border-color:var(--gold);color:var(--wine-2)}
+  .hidden{display:none}
+  .thanks{text-align:center;padding:8px 4px}
+  .thanks .big{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold-soft);margin-bottom:8px}
+  .thanks p{font-weight:500;color:var(--ivory-dim);font-size:15px}
+  .counter{margin-top:16px;text-align:center;font-weight:600;font-size:12px;color:var(--ivory-dim);background:rgba(212,175,106,.08);border:1px solid var(--line);border-radius:12px;padding:11px;letter-spacing:.05em}
+  .counter b{color:var(--gold-soft)}
+
+  .music{display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:13px;padding:12px;font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ivory-dim);width:100%;font-family:inherit}
+  .eq{display:flex;gap:3px;align-items:flex-end;height:16px}
+  .eq span{width:3px;height:5px;background:var(--gold);border-radius:2px}
+  .music.playing .eq span{animation:bounce .6s ease-in-out infinite}
+  .music.playing .eq span:nth-child(2){animation-delay:.15s}
+  .music.playing .eq span:nth-child(3){animation-delay:.3s}
+  .music.playing .eq span:nth-child(4){animation-delay:.45s}
+  @keyframes bounce{0%,100%{height:5px}50%{height:16px}}
+
+  .footer{text-align:center;color:var(--ivory-dim);font-size:12px;font-weight:500;margin-top:8px;opacity:.7}
+  .footer span{color:var(--gold-soft)}
+  .demo-tag{text-align:center;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine-2);background:var(--gold);border-radius:20px;padding:7px 14px;display:inline-block;margin:0 auto 18px}
+  .center{text-align:center}
+
+  @media (prefers-reduced-motion: reduce){.deco,.music.playing .eq span{animation:none}}
+</style>
+</head>
+<body>
+  <span class="deco a">✦</span><span class="deco b">✧</span><span class="deco c">✦</span><span class="deco d">✧</span>
+
+  <div class="frame">
+    <div class="center"><span class="demo-tag">Ejemplo · tocá los botones</span></div>
+
+    <div class="card">
+      <p class="eyebrow">Con la bendición de mis padres</p>
+      <div class="flourish">✦ ✦ ✦</div>
+      <p class="kicker">Tengo el honor de invitarte a</p>
+      <h1 class="name">Isabella</h1>
+      <p class="xv">— Mis XV Años —</p>
+      <div class="divider"></div>
+      <p class="date-line">SÁBADO 1 DE AGOSTO · 2026</p>
+    </div>
+
+    <div class="card">
+      <p class="cd-label">Cuenta regresiva</p>
+      <div class="cd">
+        <div class="cd-box"><div class="cd-num" id="d">0</div><div class="cd-unit">Días</div></div>
+        <div class="cd-box"><div class="cd-num" id="h">0</div><div class="cd-unit">Horas</div></div>
+        <div class="cd-box"><div class="cd-num" id="m">0</div><div class="cd-unit">Min</div></div>
+        <div class="cd-box"><div class="cd-num" id="s">0</div><div class="cd-unit">Seg</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div class="ico">⛪</div>
+        <div><h3>Misa de acción de gracias</h3><p>5:00 p.m. · Iglesia Nuestra Señora<br>San José</p></div>
+      </div>
+      <div class="row">
+        <div class="ico">🥂</div>
+        <div><h3>Recepción</h3><p>7:00 p.m. · Salón Imperial<br>San José</p></div>
+      </div>
+      <button class="btn btn-ghost" onclick="window.open('https://www.google.com/maps/search/?api=1&query=San+Jose+Costa+Rica','_blank')">Cómo llegar 🗺️</button>
+    </div>
+
+    <div class="card">
+      <p class="section-title">Confirmá tu asistencia</p>
+      <p class="section-sub">Tu presencia hará este día inolvidable</p>
+
+      <div id="rsvpForm">
+        <div class="field"><label>Tu nombre</label><input id="guestName" type="text" placeholder="Ej. Familia Solano" autocomplete="name"></div>
+        <div class="field"><label>¿Cuántos asisten?</label><input id="guestCount" type="number" min="1" value="1"></div>
+        <div class="field"><label>¿Nos acompañás?</label>
+          <div class="choice">
+            <button type="button" id="yes" class="on" onclick="pick(true)">Sí, asistiré ✨</button>
+            <button type="button" id="no" onclick="pick(false)">No podré</button>
+          </div>
+        </div>
+        <button class="btn btn-primary mt" onclick="confirmar()">Enviar confirmación</button>
+      </div>
+
+      <div id="rsvpThanks" class="thanks hidden">
+        <div class="big" id="thanksTitle">¡Gracias! ✨</div>
+        <p id="thanksMsg">Isabella te espera para celebrar.</p>
+      </div>
+
+      <div class="counter">Ya confirmaron <b id="confirmados">42</b> invitados</div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <div class="ico">👗</div>
+        <div><h3>Código de vestimenta</h3><p>Etiqueta formal<br><span style="color:var(--ivory-dim)">Reservado para la quinceañera: dorado</span></p></div>
+      </div>
+      <div class="row">
+        <div class="ico">🎁</div>
+        <div><h3>Sugerencia de regalo</h3><p>Lluvia de sobres 💌<br>SINPE al 8888-8888</p></div>
+      </div>
+      <button class="music" id="musicBtn" onclick="toggleMusic()">
+        <span class="eq"><span></span><span></span><span></span><span></span></span>
+        <span id="musicTxt">Música de fondo</span>
+      </button>
+    </div>
+
+    <p class="footer">Hecho con elegancia por <span>Invitaciones [tu marca]</span> · WhatsApp</p>
+  </div>
+
+<script>
+  var target = new Date("2026-08-01T17:00:00").getTime();
+  function tick(){
+    var diff = target - Date.now(); if(diff<0) diff=0;
+    document.getElementById('d').textContent = Math.floor(diff/86400000);
+    document.getElementById('h').textContent = Math.floor(diff%86400000/3600000);
+    document.getElementById('m').textContent = Math.floor(diff%3600000/60000);
+    document.getElementById('s').textContent = Math.floor(diff%60000/1000);
+  }
+  tick(); setInterval(tick,1000);
+
+  var coming = true;
+  function pick(v){coming=v;document.getElementById('yes').classList.toggle('on',v);document.getElementById('no').classList.toggle('on',!v);}
+  function confirmar(){
+    var name=document.getElementById('guestName').value.trim()||"Invitado";
+    var count=parseInt(document.getElementById('guestCount').value)||1;
+    document.getElementById('rsvpForm').classList.add('hidden');
+    document.getElementById('rsvpThanks').classList.remove('hidden');
+    if(coming){
+      document.getElementById('thanksTitle').textContent="¡Gracias, "+name+"! ✨";
+      document.getElementById('thanksMsg').textContent="Isabella te espera (x"+count+") para celebrar este día.";
+      var c=document.getElementById('confirmados');c.textContent=parseInt(c.textContent)+count;
+    } else {
+      document.getElementById('thanksTitle').textContent="Gracias por avisar, "+name+" 💛";
+      document.getElementById('thanksMsg').textContent="Te vamos a extrañar en esta noche tan especial.";
+    }
+  }
+  function toggleMusic(){var b=document.getElementById('musicBtn');var on=b.classList.toggle('playing');document.getElementById('musicTxt').textContent=on?"Sonando ♪":"Música de fondo";}
+</script>
+</body>
+</html>
